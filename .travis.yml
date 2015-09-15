@@ -16,4 +16,4 @@ install:
   - pip install -r requirements/development.txt
 
 # command to run tests, e.g. python setup.py test
-script: tox
+script: py.test -v hipnotify tests
