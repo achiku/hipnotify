@@ -1,25 +1,8 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-"""
-test_hipnotify
-----------------------------------
-
-Tests for `hipnotify` module.
-"""
-
-import unittest
-
-from hipnotify import hipnotify
+from hipnotify import Room
 
 
-class TestHipnotify(unittest.TestCase):
-
-    def setUp(self):
-        pass
-
-    def test_something(self):
-        pass
-
-    def tearDown(self):
-        pass
+def test_room_notification():
+    """Easy test which doesn't have much meaning"""
+    r = Room('test_token', 'test_room_id', debug=True)
+    r.notify('test')

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import re
+import ast
 
 
 try:
@@ -8,20 +10,25 @@ except ImportError:
     from distutils.core import setup
 
 
-with open('README.rst') as readme_file:
+_version_re = re.compile(r'__version__\s+=\s+(.*)')
+
+
+with open('hipnotify/__init__.py', 'rb') as f:
+    version = str(ast.literal_eval(_version_re.search(
+        f.read().decode('utf-8')).group(1)))
+
+with open('README.md') as readme_file:
     readme = readme_file.read()
 
-requirements = [
-    # TODO: put package requirements here
-]
+with open('requirements/common.txt') as f:
+    requirements = [r.strip() for r in f.readlines()]
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
+with open('./requirements/development.txt') as f:
+    test_requirements = [r.strip() for r in f.readlines()]
 
 setup(
     name='hipnotify',
-    version='0.1.0',
+    version=version,
     description="Deadly simple HipChat API V2 room notification library",
     long_description=readme,
     author="Akira Chiku",
@@ -30,8 +37,7 @@ setup(
     packages=[
         'hipnotify',
     ],
-    package_dir={'hipnotify':
-                 'hipnotify'},
+    package_dir={'hipnotify': 'hipnotify'},
     include_package_data=True,
     install_requires=requirements,
     license="MIT",
