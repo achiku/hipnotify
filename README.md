@@ -16,7 +16,7 @@ I wanted HipChat V2 API + Python3 compatible HipChat client which can only send 
 
 # Usage
 
-```
+```python
 # -*- coding: utf-8 -*-
 from hipnotify import Room
 
@@ -28,3 +28,19 @@ if __name__ == '__main__':
     room = Room(HIPCHAT_TOKEN, HIPCHAT_ROOM_ID)
     room.notify('hello, world!')
 ```
+
+![](artwork/green-hello-world.png)
+
+
+```python
+room.notify('Watch out!! Something is going wrong!!', color='red')
+```
+
+![](artwork/red-caution.png)
+
+
+```python
+room.notify('Ha? Just <a href="https://google.com">google</a> it.', message_format='html')
+```
+
+![](artwork/green-html-format.png)
