@@ -2,7 +2,7 @@
 
 __author__ = 'Akira Chiku'
 __email__ = 'akira.chiku@gmail.com'
-__version__ = '0.1.2'
+__version__ = '1.0.0'
 
 from .hipnotify import Room
 
