@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import os
 import re
 import ast
 
@@ -11,6 +12,7 @@ except ImportError:
 
 
 _version_re = re.compile(r'__version__\s+=\s+(.*)')
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 with open('hipnotify/__init__.py', 'rb') as f:
@@ -20,10 +22,10 @@ with open('hipnotify/__init__.py', 'rb') as f:
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-with open('requirements/common.txt') as f:
+with open(os.path.join(base_dir, 'requirements/common.txt')) as f:
     requirements = [r.strip() for r in f.readlines()]
 
-with open('./requirements/development.txt') as f:
+with open(os.path.join(base_dir, 'requirements/development.txt')) as f:
     test_requirements = [r.strip() for r in f.readlines()]
 
 setup(
