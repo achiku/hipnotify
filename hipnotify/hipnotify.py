@@ -30,10 +30,11 @@ class Room(object):
             'message_format': message_format,
         }
         if not self.debug:
-            requests.post(
+            return requests.post(
                 self.notification_url,
                 json.dumps(self.message_dict),
                 headers=self.headers
             )
         else:
             print('HipChat message: <{}>'.format(msg))
+            return []
