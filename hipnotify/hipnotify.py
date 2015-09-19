@@ -8,7 +8,7 @@ class Room(object):
 
     """HipChat room class"""
 
-    def __init__(self, token, room_id, debug=False, endpoint_url='https://api.hipchat.com/'):
+    def __init__(self, token, room_id, debug=False, endpoint_url='https://api.hipchat.com'):
         """init Room"""
         self.token = token
         self.room_id = room_id
@@ -30,10 +30,11 @@ class Room(object):
             'message_format': message_format,
         }
         if not self.debug:
-            requests.post(
+            return requests.post(
                 self.notification_url,
                 json.dumps(self.message_dict),
                 headers=self.headers
             )
         else:
             print('HipChat message: <{}>'.format(msg))
+            return []
