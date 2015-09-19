@@ -8,7 +8,7 @@ class Room(object):
 
     """HipChat room class"""
 
-    def __init__(self, token, room_id, debug=False, endpoint_url='https://api.hipchat.com/'):
+    def __init__(self, token, room_id, debug=False, endpoint_url='https://api.hipchat.com'):
         """init Room"""
         self.token = token
         self.room_id = room_id
