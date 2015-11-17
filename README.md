@@ -3,7 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/hipnotify.svg)](https://pypi.python.org/pypi/hipnotify)
 [![PyPI downloads](https://img.shields.io/pypi/dm/hipnotify.svg)](https://pypi.python.org/pypi/hipnotify)
 [![Build Status](https://travis-ci.org/achiku/hipnotify.svg)](https://travis-ci.org/achiku/hipnotify)
-[![Dependency Status](https://gemnasium.com/achiku/hipnotify.svg)](https://gemnasium.com/achiku/hipnotify)
+[![Requirements Status](https://requires.io/github/achiku/hipnotify/requirements.svg?branch=master)](https://requires.io/github/achiku/hipnotify/requirements/?branch=master)
 
 
 Deadly simple HipChat API V2 room notification library
