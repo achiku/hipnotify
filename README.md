@@ -9,14 +9,14 @@
 Deadly simple HipChat API V2 room notification library
 
 
-# Why created
+## Why created
 
 HipChat official [third-party library web page](https://www.hipchat.com/docs/apiv2/libraries) introduces two sophisticated Python client libraries supporting almost all V2 APIs currently available. However, our usecase just needed HipChat V2 room notification API + Python3 compatible HipChat client, which can only send messages to the specified room if a room token is given, without needing an admin token. (Admin token could be pretty dangerous and certainly unnecessary in this case.)
 
 This library is designed to do simple thing simple with minimum sysadmin concern.
 
 
-# Usage
+## Usage
 
 ```python
 # -*- coding: utf-8 -*-
