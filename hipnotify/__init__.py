@@ -4,7 +4,7 @@ from .hipnotify import Room
 
 __author__ = 'Akira Chiku'
 __email__ = 'akira.chiku@gmail.com'
-__version__ = '1.0.7'
+__version__ = '1.0.8'
 
 
 __all__ = [
